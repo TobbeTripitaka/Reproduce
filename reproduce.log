@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_11) (preloaded format=pdflatex 2015.12.20)  31 MAY 2016 14:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/MacPorts 2015_11) (preloaded format=pdflatex 2015.12.20)  31 MAY 2016 16:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -469,22 +469,21 @@ Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks36
 \verbatim@in@stream=\read2
 )
-(/Users/tobiasstal/Dropbox/UTAS/Reproduce/reproduce.aux)
+No file reproduce.aux.
 \openout1 = `reproduce.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 34.
-LaTeX Font Info:    ... okay on input line 34.
-
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 31.
+LaTeX Font Info:    ... okay on input line 31.
 (/opt/local/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count123
@@ -551,56 +550,65 @@ e
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 ABD: EveryShipout initializing macros
-LaTeX Font Info:    Try loading font information for U+msa on input line 37.
+(/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/abstract.txt)
+(/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/introduction.txt)
+<img/Wright_alchemy.jpg, id=4, 144.54pt x 189.5883pt>
+File: img/Wright_alchemy.jpg Graphic file (type jpg)
+
+<use img/Wright_alchemy.jpg>
+Package pdftex.def Info: img/Wright_alchemy.jpg used on input line 38.
+(pdftex.def)             Requested size: 266.03474pt x 348.96819pt.
+
+(/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/Scons.txt)
+(/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/LaTeX.txt
+LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 37.
+LaTeX Font Info:    Try loading font information for U+msb on input line 1.
 
 (/opt/local/share/texmf-texlive/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-<fig/plot1.png, id=4, 578.16pt x 433.62pt>
-File: fig/plot1.png Graphic file (type png)
- <use fig/plot1.png>
-Package pdftex.def Info: fig/plot1.png used on input line 41.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-<fig/plot2.png, id=6, 578.16pt x 433.62pt>
-File: fig/plot2.png Graphic file (type png)
- <use fig/plot2.png>
-Package pdftex.def Info: fig/plot2.png used on input line 45.
-(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
-
-(/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/results1.txt)
-<fig/map1.pdf, id=7, 597.23125pt x 845.1575pt>
-File: fig/map1.pdf Graphic file (type pdf)
- <use fig/map1.pdf>
-Package pdftex.def Info: fig/map1.pdf used on input line 54.
-(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
- [1
+) [1
 
 {/opt/local/var/db/texmf/fonts/map/pdftex/updmap/pdftex.map} </Users/tobiasstal
-/Dropbox/UTAS/Reproduce/fig/plot1.png> </Users/tobiasstal/Dropbox/UTAS/Reproduc
-e/fig/plot2.png>] <img/graptolite.jpg, id=17, 670.6656pt x 513.117pt>
-File: img/graptolite.jpg Graphic file (type jpg)
+/Dropbox/UTAS/Reproduce/img/Wright_alchemy.jpg>]) <fig/plot1.png, id=12, 578.16
+pt x 433.62pt>
+File: fig/plot1.png Graphic file (type png)
 
-<use img/graptolite.jpg>
-Package pdftex.def Info: img/graptolite.jpg used on input line 57.
-(pdftex.def)             Requested size: 335.33197pt x 256.55788pt.
- <img/ammonite.jpg, id=18, 1252.68pt x 1252.68pt>
-File: img/ammonite.jpg Graphic file (type jpg)
+<use fig/plot1.png>
+Package pdftex.def Info: fig/plot1.png used on input line 62.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ <fig/plot2.png, id=14, 578.16pt x 433.62pt>
+File: fig/plot2.png Graphic file (type png)
 
-<use img/ammonite.jpg>
-Package pdftex.def Info: img/ammonite.jpg used on input line 58.
-(pdftex.def)             Requested size: 626.33847pt x 626.33847pt.
+<use fig/plot2.png>
+Package pdftex.def Info: fig/plot2.png used on input line 66.
+(pdftex.def)             Requested size: 289.07928pt x 216.80946pt.
+ (/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/results1.txt) <fig/map1.pdf, id=
+15, 597.23125pt x 845.1575pt>
+File: fig/map1.pdf Graphic file (type pdf)
+ <use fig/map1.pdf>
+Package pdftex.def Info: fig/map1.pdf used on input line 75.
+(pdftex.def)             Requested size: 298.61488pt x 422.57771pt.
 
-Overfull \hbox (497.4069pt too wide) in paragraph at lines 57--59
-[][] [] 
- []
+<img/Dirby_bird.jpg, id=16, 5660.14626pt x 4241.8475pt> [2 </Users/tobiasstal/D
+ropbox/UTAS/Reproduce/fig/plot1.png> </Users/tobiasstal/Dropbox/UTAS/Reproduce/
+fig/plot2.png>]
+File: img/Dirby_bird.jpg Graphic file (type jpg)
+ <use img/Dirby_bird.jpg>
+Package pdftex.def Info: img/Dirby_bird.jpg used on input line 78.
+(pdftex.def)             Requested size: 241.84843pt x 181.23083pt.
 
-[2 </Users/tobiasstal/Dropbox/UTAS/Reproduce/fig/map1.pdf>]
+<img/Boyle_front_page.jpg, id=23, 899.36pt x 1409.265pt>
+File: img/Boyle_front_page.jpg Graphic file (type jpg)
+
+<use img/Boyle_front_page.jpg>
+Package pdftex.def Info: img/Boyle_front_page.jpg used on input line 80.
+(pdftex.def)             Requested size: 266.03474pt x 416.86928pt.
+ [3 </Users/tobiasstal/Dropbox/UTAS/Reproduce/fig/map1.pdf> </Users/tobiasstal/
+Dropbox/UTAS/Reproduce/img/Dirby_bird.jpg>]
 (/Users/tobiasstal/Dropbox/UTAS/Reproduce/txt/flow.tex
 \pgf@layerbox@background=\box40
 \pgf@layerboxsaved@background=\box41
@@ -609,34 +617,34 @@ Overfull \hbox (497.4069pt too wide) in paragraph at lines 57--59
 \c@cntShader=\count129
 \c@cntRoot=\count130
 )
-Overfull \hbox (23.43462pt too wide) in paragraph at lines 33--67
+Overfull \hbox (23.43462pt too wide) in paragraph at lines 31--91
 [][]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 33--67
+Underfull \hbox (badness 10000) in paragraph at lines 31--91
 
  []
 
-[3 </Users/tobiasstal/Dropbox/UTAS/Reproduce/img/graptolite.jpg> </Users/tobias
-stal/Dropbox/UTAS/Reproduce/img/ammonite.jpg>] [4]
-(/Users/tobiasstal/Dropbox/UTAS/Reproduce/reproduce.aux) ) 
+[4 </Users/tobiasstal/Dropbox/UTAS/Reproduce/img/Boyle_front_page.jpg>]
+[5] (/Users/tobiasstal/Dropbox/UTAS/Reproduce/reproduce.aux) ) 
 Here is how much of TeX's memory you used:
- 13501 strings out of 494185
- 261036 string characters out of 6156887
- 415137 words of memory out of 5000000
- 16542 multiletter control sequences out of 15000+600000
- 8288 words of font info for 32 fonts, out of 8000000 for 9000
+ 13519 strings out of 494185
+ 261613 string characters out of 6156887
+ 415211 words of memory out of 5000000
+ 16550 multiletter control sequences out of 15000+600000
+ 9498 words of font info for 36 fonts, out of 8000000 for 9000
  430 hyphenation exceptions out of 8191
- 55i,6n,54p,390b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
-</opt/local/share/tex
-mf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-tex
-live/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fo
-nts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on reproduce.pdf (4 pages, 9534636 bytes).
+ 55i,6n,54p,568b,643s stack positions out of 5000i,500n,10000p,200000b,80000s
+</opt/local/share
+/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb></opt/local/share/texm
+f-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></opt/local/share/texmf-texl
+ive/fonts/type1/public/amsfonts/cm/cmr8.pfb></opt/local/share/texmf-texlive/fon
+ts/type1/public/amsfonts/cm/cmsy10.pfb>
+Output written on reproduce.pdf (5 pages, 5924840 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 54 PDF objects out of 1000 (max. 8388607)
+ 33 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 43 words of extra memory for PDF output out of 10000 (max. 10000000)
 

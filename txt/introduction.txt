@@ -1,0 +1,1 @@
+Reproducibility has been discussed for a long time. Boyle. Geophysics. Scons. Wavelab. Madagascar. This report and tutorial builds on these experiences  and suggest a few new approaches. Signal processing: Even if your document is not perfectely reproducible there is no excuse not to do what you can. 

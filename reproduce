@@ -1,5 +1,4 @@
-import os
-import urllib
+import os, sys, urllib
 
 #SCons does not automatically propagate the external environment, import it by defining ENV from Pythons os
 env = Environment(ENV = os.environ)
@@ -14,13 +13,16 @@ def GMT_flow(out_file,in_file,in_string):
 
 def download_url(url, filename, local_file):
 	'''
-	Download file (url) but if the link is dead, it uses old file. 
+	If the file doesn't exist; download file (url) but if the link is dead, it uses old file. 
 	'''
-	try:
-		urllib.urlretrieve (url, filename)
-	except:
-		env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
-	return
+	if not os.path.isfile(filename):
+		print 'Get ', url
+		try:
+			urllib.urlretrieve (url, filename)
+		except:
+			print 'Use old file. Error:', sys.exc_info()[0]
+			env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+		return
 
 #Build newrext.txt and test.png from the Python script test.py
 env.Command('txt/results1.txt', 'code/results1.py', 'python $SOURCE > $TARGET')
@@ -34,28 +36,23 @@ env.Command('fig/map1.pdf', 'code/gmt.sh', 'bash $SOURCE > $TARGET')
 #archFile = env.Download('ammonite.jpg', env.Alias('h'))
 #env.Download( source="", target="ammonite.jpg" ) 
 
-# Download from url
-download_url('https://upload.wikimedia.org/wikipedia/commons/7/76/Perisphinctes_ammonite.jpg', 'img/ammonite.jpg', 'img/local/ammonite.jpg')
-download_url('https://oh.no.this.link.is.dead.as.the.graptolite.jpg', 'img/graptolite.jpg', 'img/local/graptolite.jpg')
 
-# try:
-# 	urllib.urlretrieve ("https://upload.wikimedia.org/wikipedia/commons/7/76/Perisphinctes_ammonite.jpg", "ammonite.jpg")
-# except:
-# 	env.Command('img/ammonite.jpg', 'img/ammonite_old.jpg', 'cp $SOURCE > $TARGET')
-# 
-# # Download from url that is dead
-# try:
-# 	urllib.urlretrieve ("https://this.is.a.dead.link.jpg", "graptolite.jpg")
-# except:
-# 	env.Command('img/graptolite.jpg', 'img/graptolite_old.jpg', 'cp $SOURCE > $TARGET')
-# 
+# Download data or images 
+download_url('https://upload.wikimedia.org/wikipedia/commons/2/22/An_Experiment_on_a_Bird_in_an_Air_Pump_by_Joseph_Wright_of_Derby%2C_1768.jpg', 
+	'img/Dirby_bird.jpg', 'img/local/640px-An_Experiment_on_a_Bird_in_an_Air_Pump_by_Joseph_Wright_of_Derby,_1768.jpg')
+	
+download_url('https://upload.wikimedia.org/wikipedia/commons/2/29/Robertboyle_newexperiments.jpg', 
+	'img/Boyle_front_page.jpg', 'img/local/Robertboyle_newexperiments.jpg')
+
+download_url('https://upload.wokimedia.org/wikipedia/commons/9/9c/Joseph_Wright_of_Derby_The_Alchemist.jpg', 
+	'img/Wright_alchemy.jpg', 'img/local/Joseph_Wright_of_Derby_The_Alchemist.jpg')
 
 
 
 
-#env.Command('fig/map2.ps', [], 'gmt pscoast -R-90/-70/0/20 -JM6i -P -Ba -Gchocolate > $TARGET')
+env.Command('fig/map2.ps', [], 'gmt pscoast -R-90/-70/0/20 -JM6i -P -Ba -Gchocolate > $TARGET')
 
-#env.Command('fig/map2.pdf', 'fig/map2.ps', 'ps2pdf $SOURCE > $TARGET')
+env.Command('fig/map2.pdf', 'fig/map2.ps', 'ps2pdf $SOURCE > $TARGET')
 
 
 #GMT_flow('new_map',None,'pscoast -R-20/-10/10/12 -JM6i -P -Ba -Gchocolate')

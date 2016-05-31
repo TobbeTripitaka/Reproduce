@@ -1,0 +1,3 @@
+SCons is a make tool. It is based on dependencies. 
+
+This is the heart of this reproiducible project.
