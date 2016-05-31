@@ -1,21 +1,56 @@
 import os
+import urllib
 
 #SCons does not automatically propagate the external environment, import it by defining ENV from Pythons os
 env = Environment(ENV = os.environ)
 
+def GMT_flow(out_file,in_file,in_string):
+	'''
+	It's easy to build a function to call a program package, in this case the mapping tool GMT
+	
+	'''
+	env.Command(out_file, in_file, 'gmt ' + in_string+ '$SOURCE > $TARGET')
+	return
 
-#def GMT_flow(out_file,in_file,in_string):
-#	env.Command(out_file, in_file, 'gmt ' + in_string+ '$SOURCE > $TARGET')
-
+def download_url(url, filename, local_file):
+	'''
+	Download file (url) but if the link is dead, it uses old file. 
+	'''
+	try:
+		urllib.urlretrieve (url, filename)
+	except:
+		env.Command(filename, local_file, Copy("$TARGET", "$SOURCE"))
+	return
 
 #Build newrext.txt and test.png from the Python script test.py
 env.Command('txt/results1.txt', 'code/results1.py', 'python $SOURCE > $TARGET')
-
 
 env.Command(['fig/plot1.png', 'fig/plot2.png'], 'code/plots.py', 'python $SOURCE > $TARGET')
 
 #Build map from shell script with gmt programs
 env.Command('fig/map1.pdf', 'code/gmt.sh', 'bash $SOURCE > $TARGET')
+
+# Download from an url
+#archFile = env.Download('ammonite.jpg', env.Alias('h'))
+#env.Download( source="", target="ammonite.jpg" ) 
+
+# Download from url
+download_url('https://upload.wikimedia.org/wikipedia/commons/7/76/Perisphinctes_ammonite.jpg', 'img/ammonite.jpg', 'img/local/ammonite.jpg')
+download_url('https://oh.no.this.link.is.dead.as.the.graptolite.jpg', 'img/graptolite.jpg', 'img/local/graptolite.jpg')
+
+# try:
+# 	urllib.urlretrieve ("https://upload.wikimedia.org/wikipedia/commons/7/76/Perisphinctes_ammonite.jpg", "ammonite.jpg")
+# except:
+# 	env.Command('img/ammonite.jpg', 'img/ammonite_old.jpg', 'cp $SOURCE > $TARGET')
+# 
+# # Download from url that is dead
+# try:
+# 	urllib.urlretrieve ("https://this.is.a.dead.link.jpg", "graptolite.jpg")
+# except:
+# 	env.Command('img/graptolite.jpg', 'img/graptolite_old.jpg', 'cp $SOURCE > $TARGET')
+# 
+
+
 
 
 #env.Command('fig/map2.ps', [], 'gmt pscoast -R-90/-70/0/20 -JM6i -P -Ba -Gchocolate > $TARGET')
