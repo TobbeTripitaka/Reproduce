@@ -1,0 +1,32 @@
+import os
+
+#SCons does not automatically propagate the external environment, import it by defining ENV from Pythons os
+env = Environment(ENV = os.environ)
+
+
+#def GMT_flow(out_file,in_file,in_string):
+#	env.Command(out_file, in_file, 'gmt ' + in_string+ '$SOURCE > $TARGET')
+
+
+#Build newrext.txt and test.png from the Python script test.py
+env.Command('txt/results1.txt', 'code/results1.py', 'python $SOURCE > $TARGET')
+
+
+env.Command(['fig/plot1.png', 'fig/plot2.png'], 'code/plots.py', 'python $SOURCE > $TARGET')
+
+#Build map from shell script with gmt programs
+env.Command('fig/map1.pdf', 'code/gmt.sh', 'bash $SOURCE > $TARGET')
+
+
+#env.Command('fig/map2.ps', [], 'gmt pscoast -R-90/-70/0/20 -JM6i -P -Ba -Gchocolate > $TARGET')
+
+#env.Command('fig/map2.pdf', 'fig/map2.ps', 'ps2pdf $SOURCE > $TARGET')
+
+
+#GMT_flow('new_map',None,'pscoast -R-20/-10/10/12 -JM6i -P -Ba -Gchocolate')
+
+
+
+env.PDF ('reproduce.pdf', 'reproduce.tex')
+
+
