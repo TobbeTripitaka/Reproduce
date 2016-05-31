@@ -1,2 +1,0 @@
-Python calculations
-enerated by a Python script. 
